@@ -35,5 +35,35 @@ namespace mf_dev_backend_2023.Controllers
             }
             return View();
         }
+
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var dados = await _Context.Veiculos.FindAsync(id);
+
+            if (dados == null)
+                return NotFound();
+
+            return View(dados);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, Veiculo veiculo)
+        {
+            if (id != veiculo.Id)
+                return NotFound();
+
+            if (ModelState.IsValid)
+            {
+
+                _Context.Veiculos.Update(veiculo);
+                await _Context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
     }
 }
