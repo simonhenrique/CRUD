@@ -15,7 +15,7 @@ namespace mf_dev_backend_2023.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    sennha = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Senhha = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Perfil = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

@@ -14,7 +14,7 @@ namespace mf_dev_backend_2023.Models
 
         [Required(ErrorMessage ="Obrigatório informar a senha")]
         [DataType(DataType.Password)]
-        public string sennha { get; set; }
+        public string Senha { get; set; }
 
         [Required(ErrorMessage ="Obrigatório informar o perfil")]
         public Perfil Perfil { get; set; }
