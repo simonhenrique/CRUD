@@ -74,7 +74,7 @@ namespace mf_dev_backend_2023.Controllers
             return View();
         }
 
-        
+
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();

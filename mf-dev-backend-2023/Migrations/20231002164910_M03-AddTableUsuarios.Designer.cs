@@ -73,7 +73,7 @@ namespace mf_dev_backend_2023.Migrations
                     b.Property<int>("Perfil")
                         .HasColumnType("int");
 
-                    b.Property<string>("sennha")
+                    b.Property<string>("senha")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
